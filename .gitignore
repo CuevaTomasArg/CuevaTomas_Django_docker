@@ -1,2 +1,3 @@
 manage.py
-django_docker
+django_docker/
+files_explications/
