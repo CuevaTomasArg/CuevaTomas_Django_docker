@@ -4,3 +4,36 @@ Welcome to the repository where you can find the necessary files, Dockerfile, do
 
 ## How to use
 ---
+1. Clone the repository
+```
+git clone https://github.com/sebastian-s/django-docker
+```
+2. Change directory to the cloned repository
+```
+cd django-docker
+```
+3. Run the container
+```
+docker-compose run web django-admin startproject <name_of_project> .
+```
+Ready! We already have the development environment set up, now we just need to configure the final things in our project in 'settings.py'
+
+## Django settings
+---
+### Allowed host
+```
+ALLOWED_HOSTS = ['*']
+```
+### Database
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432
+    }
+}
+```
