@@ -37,3 +37,14 @@ DATABASES = {
     }
 }
 ```
+## Comands
+Run host
+```
+docker-compose up -d
+```
+Open comand line to container
+```
+docker-compose exec -it web bash
+```
+
+in the container comand line, we can do any comand to the project
